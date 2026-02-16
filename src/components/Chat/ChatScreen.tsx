@@ -4,7 +4,7 @@ import { useTheme, Text, TextInput, IconButton, Surface } from 'react-native-pap
 import { ChatContext } from './ChatProvider';
 import { chatStyles } from './Chat.style';
 
-export const ChatScreen: React.FC = () => {
+export const ChatComponent: React.FC = () => {
     const { messages, sendMessage, users, user: currentUser } = useContext(ChatContext);
     const [text, setText] = useState('');
     const flatListRef = useRef<FlatList>(null);

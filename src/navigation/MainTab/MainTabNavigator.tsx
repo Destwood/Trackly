@@ -6,6 +6,10 @@ import { mainTabNavigatorStyles } from './MainTabNavigator.style';
 import TodosScreen from '../../screens/Todos/TodosScreen';
 
 import { MainTabRoute } from '../types';
+import NotesScreen from "../../screens/Notes/NotesScreen";
+import HabitsScreen from "../../screens/Habits/HabitsScreen";
+import ChatScreen from "../../screens/Chat/ChatScreen";
+import SettingsScreen from "../../screens/Settings/SettingsScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -34,10 +38,10 @@ export default function MainTabNavigator() {
             })}
         >
             <Tab.Screen name={MainTabRoute.Todos} component={TodosScreen} />
-            {/*<Tab.Screen name={MainTabRoute.Notes} component={NotesScreen} />*/}
-            {/*<Tab.Screen name={MainTabRoute.Habits} component={HabitsScreen} />*/}
-            {/*<Tab.Screen name={MainTabRoute.Chat} component={ChatScreen} />*/}
-            {/*<Tab.Screen name={MainTabRoute.Settings} component={SettingsScreen} />*/}
+            <Tab.Screen name={MainTabRoute.Notes} component={NotesScreen} />
+            <Tab.Screen name={MainTabRoute.Habits} component={HabitsScreen} />
+            <Tab.Screen name={MainTabRoute.Chat} component={ChatScreen} />
+            <Tab.Screen name={MainTabRoute.Settings} component={SettingsScreen} />
         </Tab.Navigator>
     );
 }
